@@ -1,0 +1,215 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav" style="width: 250px">
+	<a class="navbar-brand js-scroll-trigger" href="#page-top">
+    <span class="d-none d-lg-block">
+          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="./resources/img/profile.jpg" alt="">
+        </span>
+	</a>
+	<div class="collapse navbar-collapse short-details" id="navbarSupportedContent" >
+		<ul class="navbar-nav" style=" margin-top: 50px; float: none">
+			<li class="nav-item" style="float: none">
+				<a class="nav-link js-scroll-trigger">Phone:</a>
+			</li>
+			<li class="nav-item" style="float: none">
+				<a class="nav-link js-scroll-trigger">{{userDetails.phone}}</a>
+			</li>
+			<li class="nav-item" style="float: none">
+				<a class="nav-link js-scroll-trigger">Address: </a>
+			</li>
+			<li class="nav-item" style="float: none">
+				<a class="nav-link js-scroll-trigger">{{userDetails.adress}}</a>
+			</li>
+			<li class="nav-item" style="float: none">
+				<a class="nav-link js-scroll-trigger">Email:</a>
+			</li>
+			<li  class="nav-item" style="float: none;  text-transform: lowercase">
+				<a class="nav-link js-scroll-trigger">{{userDetails.email}}</a>
+			</li>
+		</ul>
+
+		<br>
+		<div class="list-inline list-social-icons mb-0" style="display: inline-block">
+
+      <span class="list-inline-item">
+        <a href="#">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                </span>
+        </a>
+      </span>
+			<span class="list-inline-item">
+        <a href="#">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+        </a>
+      </span>
+		</div>
+	</div>
+</nav>
+
+<div class="container-fluid p-0" style="padding-left: 100px">
+
+	<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience" style="min-height:auto">
+		<div class="my-auto">
+			<h1 class="mb-0">{{userDetails.name}}
+				<span class="text-primary">{{userDetails.surname}}</span>
+			</h1>
+
+		</div>
+		<hr>
+
+		<div class="my-auto">
+			<h2 class="mb-5">Experience</h2>
+
+			<div class="resume-item d-flex flex-column flex-md-row mb-5">
+				<div class="resume-content mr-auto">
+					<div ng-repeat="data in userDetails.experience" track by $index><h3 class="mb-0">{{userDetails.experience[$index].position}}</h3>
+						<div class="subheading mb-3">{{userDetails.experience[$index].workplace}}</div>
+						<p>{{userDetails.experience[$index].description}}</p>
+						<div class="resume-date text-md-right">
+							<span class="text-primary">{{userDetails.experience[$index].startDate | date: "mediumDate"}} - {{userDetails.experience[$index].endDate | date: "mediumDate"}}</span>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</section>
+
+	<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education" style="min-height:auto">
+		<div class="my-auto">
+			<h2 class="mb-5">Education</h2>
+
+			<div class="resume-item d-flex flex-column flex-md-row mb-5">
+				<div class="resume-content mr-auto">
+					<h3 class="mb-0">University of Colorado Boulder</h3>
+					<div class="subheading mb-3">Bachelor of Science</div>
+					<div>Computer Science - Web Development Track</div>
+					<p>GPA: 3.23</p>
+				</div>
+				<div class="resume-date text-md-right">
+					<span class="text-primary">August 2006 - May 2010</span>
+				</div>
+			</div>
+
+			<div class="resume-item d-flex flex-column flex-md-row">
+				<div class="resume-content mr-auto">
+					<h3 class="mb-0">James Buchanan High School</h3>
+					<div class="subheading mb-3">Technology Magnent Program</div>
+					<p>GPA: 3.56</p>
+				</div>
+				<div class="resume-date text-md-right">
+					<span class="text-primary">August 2002 - May 2006</span>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills" style="min-height:auto">
+		<div class="my-auto">
+			<h2 class="mb-5">Skills</h2>
+
+			<div class="subheading mb-3">Programming Languages &amp; Tools</div>
+			<ul class="list-inline list-icons">
+				<li class="list-inline-item">
+					<i class="devicons devicons-html5"></i>
+				</li>
+				<li class="list-inline-item">
+					<i class="devicons devicons-css3"></i>
+				</li>
+				<li class="list-inline-item">
+					<i class="devicons devicons-javascript"></i>
+				</li>
+				<li class="list-inline-item">
+					<i class="devicons devicons-jquery"></i>
+				</li>
+				<li class="list-inline-item">
+					<i class="devicons devicons-sass"></i>
+				</li>
+				<li class="list-inline-item">
+					<i class="devicons devicons-less"></i>
+				</li>
+				<li class="list-inline-item">
+					<i class="devicons devicons-bootstrap"></i>
+				</li>
+				<li class="list-inline-item">
+					<i class="devicons devicons-wordpress"></i>
+				</li>
+				<li class="list-inline-item">
+					<i class="devicons devicons-grunt"></i>
+				</li>
+				<li class="list-inline-item">
+					<i class="devicons devicons-gulp"></i>
+				</li>
+				<li class="list-inline-item">
+					<i class="devicons devicons-npm"></i>
+				</li>
+			</ul>
+
+			<div class="subheading mb-3">Workflow</div>
+			<ul class="fa-ul mb-0">
+				<li>
+					<i class="fa-li fa fa-check"></i>
+					Mobile-First, Responsive Design</li>
+				<li>
+					<i class="fa-li fa fa-check"></i>
+					Cross Browser Testing &amp; Debugging</li>
+				<li>
+					<i class="fa-li fa fa-check"></i>
+					Cross Functional Teams</li>
+				<li>
+					<i class="fa-li fa fa-check"></i>
+					Agile Development &amp; Scrum</li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests" style="min-height:auto">
+		<div class="my-auto">
+			<h2 class="mb-5">Interests</h2>
+			<p>Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skiier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.</p>
+			<p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technolgy advancements in the front-end web development world.</p>
+		</div>
+	</section>
+
+	<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="awards">
+		<div class="my-auto">
+			<h2 class="mb-5">Awards &amp; Certifications</h2>
+			<ul class="fa-ul mb-0">
+				<li>
+					<i class="fa-li fa fa-trophy text-warning"></i>
+					Google Analytics Certified Developer</li>
+				<li>
+					<i class="fa-li fa fa-trophy text-warning"></i>
+					Mobile Web Specialist - Google Certification</li>
+				<li>
+					<i class="fa-li fa fa-trophy text-warning"></i>
+					1<sup>st</sup>
+					Place - University of Colorado Boulder - Emerging Tech Competition 2009</li>
+				<li>
+					<i class="fa-li fa fa-trophy text-warning"></i>
+					1<sup>st</sup>
+					Place - University of Colorado Boulder - Adobe Creative Jam 2008 (UI Design Category)</li>
+				<li>
+					<i class="fa-li fa fa-trophy text-warning"></i>
+					2<sup>nd</sup>
+					Place - University of Colorado Boulder - Emerging Tech Competition 2008</li>
+				<li>
+				<li>
+					<i class="fa-li fa fa-trophy text-warning"></i>
+					1<sup>st</sup>
+					Place - James Buchanan High School - Hackathon 2006</li>
+				<li>
+					<i class="fa-li fa fa-trophy text-warning"></i>
+					3<sup>rd</sup>
+					Place - James Buchanan High School - Hackathon 2005</li>
+			</ul>
+		</div>
+	</section>
+
+</div>
+
