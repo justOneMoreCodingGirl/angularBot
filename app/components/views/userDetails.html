@@ -1,28 +1,33 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav" style="width: 250px">
 	<a class="navbar-brand js-scroll-trigger" href="#page-top">
-    <span class="d-none d-lg-block">
-          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="./resources/img/profile.jpg" alt="">
+
+		<span class="d-none d-lg-block">
+			<a href="/">
+				<img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="./resources/img/profile.jpg" alt="" width="150" height="150">
+			</a>
+
         </span>
 	</a>
+
 	<div class="collapse navbar-collapse short-details" id="navbarSupportedContent" >
 		<ul class="navbar-nav" style=" margin-top: 50px; float: none">
 			<li class="nav-item" style="float: none">
-				<a class="nav-link js-scroll-trigger">Phone:</a>
+				<p class="nav-link js-scroll-trigger">Phone:</p>
 			</li>
 			<li class="nav-item" style="float: none">
-				<a class="nav-link js-scroll-trigger">{{userDetails.phone}}</a>
+				<p class="nav-link js-scroll-trigger">{{userDetails.phone}}</p>
 			</li>
 			<li class="nav-item" style="float: none">
-				<a class="nav-link js-scroll-trigger">Address: </a>
+				<p class="nav-link js-scroll-trigger">Address: </p>
 			</li>
 			<li class="nav-item" style="float: none">
-				<a class="nav-link js-scroll-trigger">{{userDetails.adress}}</a>
+				<p class="nav-link js-scroll-trigger">{{userDetails.adress}}</p>
 			</li>
 			<li class="nav-item" style="float: none">
-				<a class="nav-link js-scroll-trigger">Email:</a>
+				<p class="nav-link js-scroll-trigger">Email:</p>
 			</li>
-			<li  class="nav-item" style="float: none;  text-transform: lowercase">
-				<a class="nav-link js-scroll-trigger">{{userDetails.email}}</a>
+			<li  class="nav-item" style="float: none">
+				<span class="nav-link js-scroll-trigger" style="text-transform: lowercase">{{userDetails.email | lowercase}}</span>
 			</li>
 		</ul>
 
@@ -57,10 +62,12 @@
 				<span class="text-primary">{{userDetails.surname}}</span>
 			</h1>
 
+			<h3 class="mb-0" style="color: #00e6ac">Score {{rating.rating}}</h3>
+
 		</div>
 		<hr>
 
-		<div class="my-auto">
+		<div class="my-auto" ng-show="showExperience">
 			<h2 class="mb-5">Experience</h2>
 
 			<div class="resume-item d-flex flex-column flex-md-row mb-5">
@@ -79,7 +86,7 @@
 		</div>
 	</section>
 
-	<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education" style="min-height:auto">
+	<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education" style="min-height:auto" ng-show="showEducation">
 		<div class="my-auto">
 			<h2 class="mb-5">Education</h2>
 
@@ -109,7 +116,7 @@
 		</div>
 	</section>
 
-	<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills" style="min-height:auto">
+	<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills" style="min-height:auto" ng-show="showSkills">
 		<div class="my-auto">
 			<h2 class="mb-5">Skills</h2>
 
@@ -168,15 +175,8 @@
 		</div>
 	</section>
 
-	<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests" style="min-height:auto">
-		<div class="my-auto">
-			<h2 class="mb-5">Interests</h2>
-			<p>Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skiier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.</p>
-			<p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technolgy advancements in the front-end web development world.</p>
-		</div>
-	</section>
 
-	<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="awards">
+	<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="awards" ng-show="showAwards">
 		<div class="my-auto">
 			<h2 class="mb-5">Awards &amp; Certifications</h2>
 			<ul class="fa-ul mb-0">

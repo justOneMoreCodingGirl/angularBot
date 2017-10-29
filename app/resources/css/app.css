@@ -36,14 +36,14 @@ h2 {
 .list-social-icons a {
   color: #495057; }
 .list-social-icons a:hover {
-  color: #BD5D38; }
+  color: #00e6ac  !important; }
 .list-social-icons a .fa-lg {
   font-size: 1.75rem; }
 
 .list-icons {
   font-size: 3rem; }
 .list-icons .list-inline-item i:hover {
-  color: #BD5D38; }
+  color: #00e6ac !important; }
 
 #sideNav .navbar-nav .nav-item .nav-link {
   font-weight: 600;
@@ -103,17 +103,40 @@ section.resume-section .resume-item .resume-date {
     padding-bottom: 3rem !important; } }
 
 .bg-primary {
-  background-color: #BD5D38 !important; }
+  background-color: #00e6ac !important; }
 
 .text-primary {
-  color: #BD5D38 !important; }
+  color: #00e6ac !important; }
 
 a {
-  color: #BD5D38; }
+  color: #bc2207  !important; }
 a:hover, a:focus, a:active {
-  color: #824027; }
+  color: #841703; }
 
- .nav-item a{
+ .nav-item p{
   color: whitesmoke;
 }
 
+ .customNav{
+   min-width: 250px;
+   padding-right: 30px;
+   background-color: #00e6ac;
+ }
+
+ .container{
+   padding-left: 30px;
+ }
+
+ th{
+   min-width: 110px;
+ }
+
+ table{
+   margin-top: 5%;
+   margin-left: 9%;
+ }
+
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  background-color: #00e6ac;
+}

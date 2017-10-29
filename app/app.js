@@ -13,7 +13,7 @@ mostPopularListingsApp.config(function($routeProvider, $locationProvider, $httpP
             controller: 'usersController',
             templateUrl: 'components/views/users.html'
         })
-        .when('/userDetails', {
+        .when('/users/:userID', {
             controller: 'userDetailsController',
             templateUrl: 'components/views/userDetails.html'
         })

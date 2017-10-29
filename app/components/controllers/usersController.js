@@ -31,6 +31,7 @@ angular.module('mostPopularListingsApp.users', ['ngRoute'])
 
 	$scope.allUsers;
 
+
 	$scope.getData = function () {
         $http({
             method : "GET",
