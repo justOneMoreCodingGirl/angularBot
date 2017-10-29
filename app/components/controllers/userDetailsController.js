@@ -35,10 +35,7 @@ angular.module('mostPopularListingsApp.userDetails', ['ngRoute'])
 
     $scope.IdUser = $routeParams.userID;
 
-    $scope.rating = {
-        userID : 1,
-        rating: 0
-    }
+
     $scope.getData = function () {
         $http({
             method : "GET",
@@ -52,6 +49,11 @@ angular.module('mostPopularListingsApp.userDetails', ['ngRoute'])
             $scope.userDetails = response.statusText;
         });
 
+    }
+
+    $scope.rating = {
+        userID : $scope.IdUser,
+        rating: 0
     }
 
     $scope.getRating = function () {
